@@ -21,12 +21,14 @@ main.addEventListener("click", (e) => {
     if (isClick == false) {
       isClick = true;
       console.log(isClick);
-      e.target.parentElement.style.textDecoration = "line-through";
-      e.target.parentElement.style.textDecorationColor = "rgb(39, 39, 39)";
+      e.target.nextElementSibling.style.textDecoration = "line-through";
+      e.target.nextElementSibling.style.textDecorationColor = "rgb(39, 39, 39)";
+      e.target.style.color="rgb(78, 78, 78)"
     } else if ((isClick = true)) {
       isClick = false;
       console.log(isClick);
-      e.target.parentElement.style = "";
+      e.target.nextElementSibling.style = "";
+      e.target.style="gray"
     }
   }
 });
